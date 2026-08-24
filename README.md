@@ -2,7 +2,7 @@
 
 [![VS Code](https://img.shields.io/badge/VS%20Code-Theme-7CC4F8?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=lilinhuang.soft-sky-theme)
 
-A premium pastel blue VS Code theme inspired by a soft morning sky, gentle clouds, and calm ocean horizons — available in **Dark** and **Light** — designed for relaxed, focused, all-day coding.
+A premium pastel blue VS Code theme inspired by a soft morning sky, gentle clouds, and calm ocean horizons. Available in **Dark** and **Light**, designed for relaxed, focused, all-day coding.
 
 > *A quiet blue sky at dawn, where code flows like morning light.*
 
@@ -12,12 +12,11 @@ A premium pastel blue VS Code theme inspired by a soft morning sky, gentle cloud
 
 - **Two themes in one:** Soft Sky Dark + Soft Sky Light
 - Calm pastel blue palette with soft blue-gray layers and warm cream accents
-- No pure black, no pure white — comfortable contrast for long sessions
-- Eye-friendly and relaxing for deep-focus development
+- Comfortable contrast without pure black or pure white
 - Full syntax highlighting for JavaScript, TypeScript, React, JSX, HTML, CSS, JSON, Python, Markdown
 - Complete UI theming: editor, activity bar, sidebar, tabs, terminal, git, notifications
 - Semantic token highlighting support
-- Modern, minimal, premium aesthetic
+- Clean, modern, eye-friendly aesthetic
 
 ## Screenshots
 
@@ -122,16 +121,6 @@ Optimized syntax highlighting for:
 - Python
 - Markdown
 - And more...
-
-## Part of a Theme Collection
-
-Soft Sky Theme belongs to a cohesive personal VS Code theme collection:
-
-- [Pastel Pink](https://marketplace.visualstudio.com/items?itemName=lilinhuang.pastel-pink)
-- [Olive Dream](https://marketplace.visualstudio.com/items?itemName=lilinhuang.olive-dream)
-- [Cozy Latte](https://marketplace.visualstudio.com/items?itemName=lilinhuang.cozy-latte)
-- [Lavender Mist](https://marketplace.visualstudio.com/items?itemName=lilinhuang.lavender-mist)
-- **Soft Sky**
 
 ## Credits
 
