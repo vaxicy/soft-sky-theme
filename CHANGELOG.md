@@ -6,7 +6,9 @@ All notable changes to Soft Sky Theme will be documented in this file.
 
 ### Added
 - Initial release of **Soft Sky Theme**
+- **Dual themes**: Soft Sky Theme (dark) + Soft Sky Theme Light (dawn light variant)
 - Premium pastel blue dark theme inspired by a soft morning sky, gentle clouds, and calm ocean horizons
+- Soft dawn-blue white light theme for bright, airy daytime coding
 - Soft blue-gray layered backgrounds with warm cream accents
 - Full UI theming (editor, activity bar, sidebar, tabs, title bar, status bar, panel, terminal)
 - Comprehensive syntax highlighting for JS/TS/React/JSX/HTML/CSS/JSON/Python/Markdown

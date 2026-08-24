@@ -2,7 +2,7 @@
 
 [![VS Code](https://img.shields.io/badge/VS%20Code-Theme-7CC4F8?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=lilinhuang.soft-sky-theme)
 
-A premium pastel blue VS Code theme inspired by a soft morning sky, gentle clouds, and calm ocean horizons — designed for relaxed, focused, all-day coding.
+A premium pastel blue VS Code theme inspired by a soft morning sky, gentle clouds, and calm ocean horizons — available in **Dark** and **Light** — designed for relaxed, focused, all-day coding.
 
 > *A quiet blue sky at dawn, where code flows like morning light.*
 
@@ -10,6 +10,7 @@ A premium pastel blue VS Code theme inspired by a soft morning sky, gentle cloud
 
 ## Features
 
+- **Two themes in one:** Soft Sky Theme (dark) + Soft Sky Theme Light (dawn)
 - Calm pastel blue palette with soft blue-gray layers and warm cream accents
 - No pure black, no pure white — comfortable contrast for long sessions
 - Eye-friendly and relaxing for deep-focus development
@@ -20,9 +21,11 @@ A premium pastel blue VS Code theme inspired by a soft morning sky, gentle cloud
 
 ## Screenshots
 
+### Soft Sky Theme (Dark)
+
 Soft sky blue background for calm morning coding.
 
-![Soft Sky Theme](screenshots/en/screenshot-1-browser.png)
+![Soft Sky Theme Dark](screenshots/en/screenshot-1-browser.png)
 
 ```
 editor.background:   #141D2A
@@ -31,7 +34,22 @@ accent:              #7CC4F8
 cursor:              #FFE3B0
 ```
 
+### Soft Sky Theme Light
+
+Soft dawn-blue white background for bright, airy daytime coding.
+
+![Soft Sky Theme Light](screenshots/en/screenshot-light-1-browser.png)
+
+```
+editor.background:   #F4F7FB
+sidebar:             #EAF0F6
+accent:              #3A8DD8
+cursor:              #E8A642
+```
+
 ## Color Palette
+
+### Dark
 
 | Role | Color | Hex |
 |------|-------|-----|
@@ -45,12 +63,26 @@ cursor:              #FFE3B0
 | Comments | 🌫️ soft gray-blue | `#5E7388` |
 | Cursor | 🌅 warm sunrise | `#FFE3B0` |
 
+### Light
+
+| Role | Color | Hex |
+|------|-------|-----|
+| Background | 🌤️ dawn white | `#F4F7FB` |
+| Sidebar / Activity Bar | 🌥️ pale cloud layer | `#EAF0F6` |
+| Primary Accent | 🔵 clear sky blue | `#3A8DD8` |
+| Keywords | 🔷 soft indigo | `#4A5FA0` |
+| Functions | 🔵 sky blue | `#3A8DD8` |
+| Strings | 🧡 warm amber | `#B0761F` |
+| Numbers | 🍑 soft coral | `#C4653F` |
+| Comments | 🌫️ muted blue-gray | `#7A8CA0` |
+| Cursor | 🌅 golden sunrise | `#E8A642` |
+
 ## Installation
 
 1. Open the Extensions view in VS Code (`Ctrl+Shift+X`)
 2. Search for **"Soft Sky"**
 3. Click **Install**
-4. Open Command Palette (`Ctrl+Shift+P`) → **Preferences: Color Theme** → select **Soft Sky Theme**
+4. Open Command Palette (`Ctrl+Shift+P`) → **Preferences: Color Theme** → select **Soft Sky Theme** (dark) or **Soft Sky Theme Light**
 
 Or install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=lilinhuang.soft-sky-theme).
 
@@ -62,8 +94,20 @@ Soft Sky Theme is fully customizable via VS Code settings:
 {
   // Override any color in your settings.json
   "workbench.colorCustomizations": {
-    "editor.background": "#141D2A",
+    "editor.background": "#141D2A",   // dark
     "activityBar.background": "#0E1621"
+  }
+}
+```
+
+```jsonc
+{
+  // Light theme overrides
+  "workbench.colorCustomizations": {
+    "[Soft Sky Theme Light]": {
+      "editor.background": "#F4F7FB",
+      "activityBar.background": "#E2EAF4"
+    }
   }
 }
 ```

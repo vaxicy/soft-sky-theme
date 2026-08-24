@@ -1,46 +1,83 @@
 # -*- coding: utf-8 -*-
-"""Generate VS Code interface preview screenshot for Soft Sky Theme.
+"""Generate VS Code interface preview screenshots for Soft Sky Theme (Dark + Light).
 Outputs:
-  screenshots/en/screenshot-1-browser.png
+  screenshots/en/screenshot-1-browser.png          (dark)
+  screenshots/en/screenshot-light-1-browser.png    (light)
+  store-assets/screenshots/{en,zh}/screenshot-1-browser.png
+  store-assets/screenshots/{en,zh}/screenshot-light-1-browser.png
 """
 from PIL import Image, ImageDraw, ImageFont
 import os
 
 BASE = os.path.join(os.path.dirname(__file__), "..")
-OUT_EN = os.path.join(BASE, "screenshots", "en", "screenshot-1-browser.png")
-OUT_EN_STORE = os.path.join(BASE, "store-assets", "screenshots", "en", "screenshot-1-browser.png")
-OUT_ZH_STORE = os.path.join(BASE, "store-assets", "screenshots", "zh", "screenshot-1-browser.png")
 W, H = 1440, 900
 
-P = {
-    "titleBar": "#0F1722",
-    "titleText": "#AFC4DC",
-    "activityBar": "#111A26",
-    "activityIcon": "#4E6480",
-    "activityIconActive": "#7CC4F8",
-    "sideBar": "#111A26",
-    "sideBarText": "#C6D2E0",
-    "sideBarSub": "#6B7C93",
-    "tabActive": "#141D2A",
-    "tabInactive": "#0D1520",
-    "tabBorder": "#26374E",
-    "editorBg": "#141D2A",
-    "editorText": "#C6D2E0",
-    "lineNumber": "#3A4D66",
-    "lineNumberActive": "#7CC4F8",
-    "statusBar": "#0D1520",
-    "statusText": "#8FA2B8",
-    "accent": "#7CC4F8",
-    "border": "#26374E",
-    "keyword": "#9FB3DF",
-    "function": "#7CC4F8",
-    "string": "#F5DFA8",
-    "number": "#F0B7A4",
-    "comment": "#5E7388",
-    "type": "#BDDDE4",
-    "tag": "#9FB3DF",
-    "property": "#8FB7E8",
+PALETTES = {
+    "dark": {
+        "titleBar": "#0F1722",
+        "titleText": "#AFC4DC",
+        "activityBar": "#111A26",
+        "activityIcon": "#4E6480",
+        "activityIconActive": "#7CC4F8",
+        "sideBar": "#111A26",
+        "sideBarText": "#C6D2E0",
+        "sideBarSub": "#6B7C93",
+        "tabActive": "#141D2A",
+        "tabInactive": "#0D1520",
+        "tabBorder": "#26374E",
+        "editorBg": "#141D2A",
+        "editorText": "#C6D2E0",
+        "lineNumber": "#3A4D66",
+        "lineNumberActive": "#7CC4F8",
+        "statusBar": "#0D1520",
+        "statusText": "#8FA2B8",
+        "accent": "#7CC4F8",
+        "border": "#26374E",
+        "keyword": "#9FB3DF",
+        "function": "#7CC4F8",
+        "string": "#F5DFA8",
+        "number": "#F0B7A4",
+        "comment": "#5E7388",
+        "type": "#BDDDE4",
+        "tag": "#9FB3DF",
+        "property": "#8FB7E8",
+        "themeFile": "soft-sky-dark.json",
+        "themeLabel": "Soft Sky Theme",
+    },
+    "light": {
+        "titleBar": "#E2EAF4",
+        "titleText": "#4A5B72",
+        "activityBar": "#E2EAF4",
+        "activityIcon": "#9DB0C6",
+        "activityIconActive": "#3A8DD8",
+        "sideBar": "#EAF0F6",
+        "sideBarText": "#33415A",
+        "sideBarSub": "#7A8CA0",
+        "tabActive": "#F4F7FB",
+        "tabInactive": "#DCE6F1",
+        "tabBorder": "#C9D6E4",
+        "editorBg": "#F4F7FB",
+        "editorText": "#2A3442",
+        "lineNumber": "#B4C2D2",
+        "lineNumberActive": "#3A8DD8",
+        "statusBar": "#E2EAF4",
+        "statusText": "#5A6B82",
+        "accent": "#3A8DD8",
+        "border": "#C9D6E4",
+        "keyword": "#4A5FA0",
+        "function": "#3A8DD8",
+        "string": "#B0761F",
+        "number": "#C4653F",
+        "comment": "#7A8CA0",
+        "type": "#6E5FAF",
+        "tag": "#4A5FA0",
+        "property": "#3A8DD8",
+        "themeFile": "soft-sky-light.json",
+        "themeLabel": "Soft Sky Theme Light",
+    },
 }
+
+P = PALETTES["dark"]
 
 
 def hex_to_rgba(h, alpha=255):
@@ -164,14 +201,16 @@ def draw_activity_icon(d, idx, cx, cy, color, bar_color):
         d.ellipse((cx - 4, cy - 4, cx + 4, cy + 4), fill=hex_to_rgba(P["activityBar"]))
 
 
-def draw_screenshot(lang="en"):
+def draw_screenshot(lang="en", palette="dark"):
+    global P
+    P = PALETTES[palette]
     img = Image.new("RGBA", (W, H), hex_to_rgba(P["editorBg"]))
     d = ImageDraw.Draw(img)
     fonts = load_fonts(lang)
 
     # Title bar
     d.rectangle((0, 0, W, 32), fill=hex_to_rgba(P["titleBar"]))
-    d.text((96, 9), "Soft Sky Theme - Visual Studio Code", fill=hex_to_rgba(P["titleText"]), font=fonts["title"])
+    d.text((96, 9), P["themeLabel"] + " - Visual Studio Code", fill=hex_to_rgba(P["titleText"]), font=fonts["title"])
     for i, color in enumerate(["#FF5F57", "#FEBC2E", "#28C840"]):
         d.ellipse((16 + i * 18, 10, 28 + i * 18, 22), fill=hex_to_rgba(color))
 
@@ -193,7 +232,7 @@ def draw_screenshot(lang="en"):
     files = [
         ("  package.json", P["sideBarText"]),
         ("  themes", P["sideBarText"]),
-        ("    soft-sky-color-theme.json", P["accent"]),
+        ("    " + P["themeFile"], P["accent"]),
         ("  README.md", P["sideBarText"]),
         ("  CHANGELOG.md", P["sideBarText"]),
         ("  LICENSE", P["sideBarText"]),
@@ -204,7 +243,7 @@ def draw_screenshot(lang="en"):
         y += 26
 
     # Tabs
-    tabs = [("soft-sky-color-theme.json", False), ("package.json", False), ("preview.tsx", True)]
+    tabs = [(P["themeFile"], False), ("package.json", False), ("preview.tsx", True)]
     tab_x = sb_x + sb_w
     tab_y = 32
     tab_h = 38
@@ -255,15 +294,19 @@ def draw_screenshot(lang="en"):
 
 def main():
     outputs = [
-        (OUT_EN, "en"),
-        (OUT_EN_STORE, "en"),
-        (OUT_ZH_STORE, "zh"),
+        ("screenshot-1-browser.png", "dark"),
+        ("screenshot-light-1-browser.png", "light"),
     ]
-    for out, lang in outputs:
-        os.makedirs(os.path.dirname(out), exist_ok=True)
-        img = draw_screenshot(lang)
-        img.convert("RGB").save(out)
-        print("saved:", os.path.abspath(out), "size:", img.size, "mode: RGB")
+    for fname, palette in outputs:
+        for out, lang in [
+            (os.path.join(BASE, "screenshots", "en", fname), "en"),
+            (os.path.join(BASE, "store-assets", "screenshots", "en", fname), "en"),
+            (os.path.join(BASE, "store-assets", "screenshots", "zh", fname), "zh"),
+        ]:
+            os.makedirs(os.path.dirname(out), exist_ok=True)
+            img = draw_screenshot(lang, palette)
+            img.convert("RGB").save(out)
+            print("saved:", os.path.abspath(out), "size:", img.size, "mode: RGB", "palette:", palette)
 
 
 if __name__ == "__main__":

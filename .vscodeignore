@@ -1,4 +1,6 @@
 scripts/**
+store-assets/icon-candidates/**
+store-assets/screenshots/**
 .gitignore
 .vscode/**
 .codebuddy/**

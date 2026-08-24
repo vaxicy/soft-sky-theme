@@ -22,6 +22,7 @@
     "minimal",
     "morning",
     "dark theme",
+    "light theme",
     "aesthetic",
     "eye-friendly"
   ],
@@ -34,7 +35,12 @@
       {
         "label": "Soft Sky Theme",
         "uiTheme": "vs-dark",
-        "path": "./themes/soft-sky-color-theme.json"
+        "path": "./themes/soft-sky-dark.json"
+      },
+      {
+        "label": "Soft Sky Theme Light",
+        "uiTheme": "vs",
+        "path": "./themes/soft-sky-light.json"
       }
     ]
   },
