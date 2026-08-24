@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build / packaging
+*.vsix
+
+# Local / workspace data
+.codebuddy/
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/settings.json
+.vscode/launch.json

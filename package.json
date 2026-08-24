@@ -1,0 +1,45 @@
+{
+  "name": "soft-sky-theme",
+  "displayName": "Soft Sky Theme",
+  "description": "A premium pastel blue VS Code theme inspired by a soft morning sky, gentle clouds, and calm ocean horizons. Soft blue-gray layers with warm cream accents for relaxed, elegant coding.",
+  "version": "1.0.0",
+  "publisher": "lilinhuang",
+  "license": "SEE LICENSE IN LICENSE",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "blue",
+    "sky",
+    "pastel",
+    "soft",
+    "calm",
+    "minimal",
+    "morning",
+    "dark theme",
+    "aesthetic",
+    "eye-friendly"
+  ],
+  "galleryBanner": {
+    "color": "#151F2E",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Soft Sky Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/soft-sky-color-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vaxicy/soft-sky-theme"
+  }
+}
