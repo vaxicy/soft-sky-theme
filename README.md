@@ -10,7 +10,7 @@ A premium pastel blue VS Code theme inspired by a soft morning sky, gentle cloud
 
 ## Features
 
-- **Two themes in one:** Soft Sky Theme (dark) + Soft Sky Theme Light (dawn)
+- **Two themes in one:** Soft Sky Dark + Soft Sky Light
 - Calm pastel blue palette with soft blue-gray layers and warm cream accents
 - No pure black, no pure white — comfortable contrast for long sessions
 - Eye-friendly and relaxing for deep-focus development
@@ -21,11 +21,11 @@ A premium pastel blue VS Code theme inspired by a soft morning sky, gentle cloud
 
 ## Screenshots
 
-### Soft Sky Theme (Dark)
+### Soft Sky Dark
 
 Soft sky blue background for calm morning coding.
 
-![Soft Sky Theme Dark](screenshots/en/screenshot-1-browser.png)
+![Soft Sky Dark](screenshots/en/screenshot-1-browser.png)
 
 ```
 editor.background:   #141D2A
@@ -34,11 +34,11 @@ accent:              #7CC4F8
 cursor:              #FFE3B0
 ```
 
-### Soft Sky Theme Light
+### Soft Sky Light
 
 Soft dawn-blue white background for bright, airy daytime coding.
 
-![Soft Sky Theme Light](screenshots/en/screenshot-light-1-browser.png)
+![Soft Sky Light](screenshots/en/screenshot-light-1-browser.png)
 
 ```
 editor.background:   #F4F7FB
@@ -82,7 +82,7 @@ cursor:              #E8A642
 1. Open the Extensions view in VS Code (`Ctrl+Shift+X`)
 2. Search for **"Soft Sky"**
 3. Click **Install**
-4. Open Command Palette (`Ctrl+Shift+P`) → **Preferences: Color Theme** → select **Soft Sky Theme** (dark) or **Soft Sky Theme Light**
+4. Open Command Palette (`Ctrl+Shift+P`) → **Preferences: Color Theme** → select **Soft Sky Dark** or **Soft Sky Light**
 
 Or install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=lilinhuang.soft-sky-theme).
 
@@ -104,7 +104,7 @@ Soft Sky Theme is fully customizable via VS Code settings:
 {
   // Light theme overrides
   "workbench.colorCustomizations": {
-    "[Soft Sky Theme Light]": {
+    "[Soft Sky Light]": {
       "editor.background": "#F4F7FB",
       "activityBar.background": "#E2EAF4"
     }

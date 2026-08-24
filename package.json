@@ -33,12 +33,12 @@
   "contributes": {
     "themes": [
       {
-        "label": "Soft Sky Theme",
+        "label": "Soft Sky Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/soft-sky-dark.json"
       },
       {
-        "label": "Soft Sky Theme Light",
+        "label": "Soft Sky Light",
         "uiTheme": "vs",
         "path": "./themes/soft-sky-light.json"
       }

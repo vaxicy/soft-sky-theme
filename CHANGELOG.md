@@ -6,7 +6,7 @@ All notable changes to Soft Sky Theme will be documented in this file.
 
 ### Added
 - Initial release of **Soft Sky Theme**
-- **Dual themes**: Soft Sky Theme (dark) + Soft Sky Theme Light (dawn light variant)
+- **Dual themes**: Soft Sky Dark + Soft Sky Light
 - Premium pastel blue dark theme inspired by a soft morning sky, gentle clouds, and calm ocean horizons
 - Soft dawn-blue white light theme for bright, airy daytime coding
 - Soft blue-gray layered backgrounds with warm cream accents
