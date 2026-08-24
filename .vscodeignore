@@ -1,5 +1,6 @@
 scripts/**
 store-assets/icon-candidates/**
+store-assets/icon-nobackground.jpeg
 store-assets/screenshots/**
 .gitignore
 .vscode/**
